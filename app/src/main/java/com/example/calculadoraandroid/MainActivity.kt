@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         val buttonMinus: Button = findViewById(R.id.minus)
         val buttonPlus: Button = findViewById(R.id.sum)
         val buttonDot: Button = findViewById(R.id.dot)
+        val buttonEquals: Button = findViewById(R.id.equals)
         val text: TextView = findViewById(R.id.number)
 
         button0.setOnClickListener {
@@ -71,6 +72,10 @@ class MainActivity : AppCompatActivity() {
 
         }
         buttonAC.setOnClickListener {
+            pantalla = ""
+            text.text=pantalla
+        }
+        buttonEquals.setOnClickListener {
             pantalla = ""
             text.text=pantalla
         }
