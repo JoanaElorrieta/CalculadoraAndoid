@@ -31,77 +31,84 @@ class MainActivity : AppCompatActivity() {
         val text: TextView = findViewById(R.id.number)
 
         button0.setOnClickListener {
-            pantalla = button0.text.toString()
+            pantalla += button0.text.toString()
             text.text = pantalla
         }
         button1.setOnClickListener {
-            pantalla = button1.text.toString()
+            pantalla += button1.text.toString()
             text.text = pantalla
         }
         button2.setOnClickListener {
-            pantalla = button2.text.toString()
+            pantalla += button2.text.toString()
             text.text = pantalla
         }
         button3.setOnClickListener {
-            pantalla = button3.text.toString()
+            pantalla += button3.text.toString()
             text.text = pantalla
         }
         button4.setOnClickListener {
-            pantalla = button4.text.toString()
+            pantalla += button4.text.toString()
             text.text = pantalla
         }
         button5.setOnClickListener {
-            pantalla = button5.text.toString()
+            pantalla += button5.text.toString()
             text.text = pantalla
         }
         button6.setOnClickListener {
-            pantalla= button6.text.toString()
+            pantalla += button6.text.toString()
             text.text = pantalla
         }
         button7.setOnClickListener {
-            pantalla = button7.text.toString()
+            pantalla += button7.text.toString()
             text.text = pantalla
         }
         button8.setOnClickListener {
-            pantalla = button8.text.toString()
+            pantalla += button8.text.toString()
             text.text = pantalla
         }
         button9.setOnClickListener {
-            pantalla= button9.text.toString()
+            pantalla += button9.text.toString()
             text.text = pantalla
 
         }
         buttonAC.setOnClickListener {
-            pantalla = ""
+            pantalla = button0.text.toString()
             text.text=pantalla
+            pantalla=""
         }
         buttonEquals.setOnClickListener {
-            pantalla = ""
+            pantalla = button0.text.toString()
             text.text=pantalla
+            pantalla=""
         }
         buttonDivide.setOnClickListener {
             pantalla= buttonDivide.text.toString()
             text.text = pantalla
+            pantalla=""
         }
         buttonMultiply.setOnClickListener {
             pantalla = buttonMultiply.text.toString()
             text.text = pantalla
+            pantalla=""
         }
         buttonPlus.setOnClickListener {
             pantalla = buttonPlus.text.toString()
             text.text = pantalla
+            pantalla=""
         }
         buttonMinus.setOnClickListener {
             pantalla = buttonMinus.text.toString()
             text.text = pantalla
+            pantalla=""
         }
         buttonDot.setOnClickListener {
-            pantalla= buttonDot.text.toString()
+            pantalla += buttonDot.text.toString()
             text.text = pantalla
         }
         buttonShare.setOnClickListener {
             pantalla = getString(R.string.compartido)
             text.text = pantalla
+            pantalla=""
         }
     }
 
