@@ -10,104 +10,82 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val button0: Button = findViewById(R.id.button0)
-        val button1: Button = findViewById(R.id.button1)
-        val button2: Button = findViewById(R.id.button2)
-        val button3: Button = findViewById(R.id.button3)
-        val button4: Button = findViewById(R.id.button4)
-        val button5: Button = findViewById(R.id.button5)
-        val button6: Button = findViewById(R.id.button6)
-        val button7: Button = findViewById(R.id.button7)
-        val button8: Button = findViewById(R.id.button8)
-        val button9: Button = findViewById(R.id.button9)
-        val buttonShare: Button = findViewById(R.id.share)
-        val buttonAC: Button = findViewById(R.id.ac)
-        val buttonDivide: Button = findViewById(R.id.divide)
-        val buttonMultiply: Button = findViewById(R.id.multiply)
-        val buttonMinus: Button = findViewById(R.id.minus)
-        val buttonPlus: Button = findViewById(R.id.sum)
-        val buttonDot: Button = findViewById(R.id.dot)
-        val buttonEquals: Button = findViewById(R.id.equals)
-        val text: TextView = findViewById(R.id.number)
 
-        button0.setOnClickListener {
-            pantalla += button0.text.toString()
-            text.text = pantalla
+        findViewById<Button>(R.id.button0).setOnClickListener {
+            pantalla += findViewById<Button>(R.id.button0).text.toString()
+            findViewById<TextView>(R.id.number).text = pantalla
         }
-        button1.setOnClickListener {
-            pantalla += button1.text.toString()
-            text.text = pantalla
+        findViewById<Button>(R.id.button1).setOnClickListener {
+            pantalla += findViewById<Button>(R.id.button1).text.toString()
+            findViewById<TextView>(R.id.number).text = pantalla
         }
-        button2.setOnClickListener {
-            pantalla += button2.text.toString()
-            text.text = pantalla
+        findViewById<Button>(R.id.button2).setOnClickListener {
+            pantalla += findViewById<Button>(R.id.button2).text.toString()
+            findViewById<TextView>(R.id.number).text = pantalla
         }
-        button3.setOnClickListener {
-            pantalla += button3.text.toString()
-            text.text = pantalla
+        findViewById<Button>(R.id.button3).setOnClickListener {
+            pantalla += findViewById<Button>(R.id.button3).text.toString()
+            findViewById<TextView>(R.id.number).text = pantalla
         }
-        button4.setOnClickListener {
-            pantalla += button4.text.toString()
-            text.text = pantalla
+        findViewById<Button>(R.id.button4).setOnClickListener {
+            pantalla += findViewById<Button>(R.id.button4).text.toString()
+            findViewById<TextView>(R.id.number).text = pantalla
         }
-        button5.setOnClickListener {
-            pantalla += button5.text.toString()
-            text.text = pantalla
+        findViewById<Button>(R.id.button5).setOnClickListener {
+            pantalla +=  findViewById<Button>(R.id.button5).text.toString()
+            findViewById<TextView>(R.id.number).text = pantalla
         }
-        button6.setOnClickListener {
-            pantalla += button6.text.toString()
-            text.text = pantalla
+        findViewById<Button>(R.id.button6).setOnClickListener {
+            pantalla += findViewById<Button>(R.id.button6).text.toString()
+            findViewById<TextView>(R.id.number).text = pantalla
         }
-        button7.setOnClickListener {
-            pantalla += button7.text.toString()
-            text.text = pantalla
+        findViewById<Button>(R.id.button7).setOnClickListener {
+            pantalla += findViewById<Button>(R.id.button7).text.toString()
+            findViewById<TextView>(R.id.number).text = pantalla
         }
-        button8.setOnClickListener {
-            pantalla += button8.text.toString()
-            text.text = pantalla
+        findViewById<Button>(R.id.button8).setOnClickListener {
+            pantalla += findViewById<Button>(R.id.button8).text.toString()
+            findViewById<TextView>(R.id.number).text = pantalla
         }
-        button9.setOnClickListener {
-            pantalla += button9.text.toString()
-            text.text = pantalla
-
+        findViewById<Button>(R.id.button9).setOnClickListener {
+            pantalla += findViewById<Button>(R.id.button9).text.toString()
+            findViewById<TextView>(R.id.number).text = pantalla
         }
-        buttonAC.setOnClickListener {
-            pantalla = button0.text.toString()
-            text.text=pantalla
+        findViewById<Button>(R.id.ac).setOnClickListener {
+            findViewById<TextView>(R.id.number).text="0"
             pantalla=""
         }
-        buttonEquals.setOnClickListener {
-            pantalla = button0.text.toString()
-            text.text=pantalla
+        findViewById<Button>(R.id.equals).setOnClickListener {
+            findViewById<TextView>(R.id.number).text="0"
             pantalla=""
         }
-        buttonDivide.setOnClickListener {
-            pantalla= buttonDivide.text.toString()
-            text.text = pantalla
+        findViewById<Button>(R.id.divide).setOnClickListener {
+            pantalla= findViewById<Button>(R.id.divide).text.toString()
+            findViewById<TextView>(R.id.number).text = pantalla
             pantalla=""
         }
-        buttonMultiply.setOnClickListener {
-            pantalla = buttonMultiply.text.toString()
-            text.text = pantalla
+        findViewById<Button>(R.id.multiply).setOnClickListener {
+            pantalla = findViewById<Button>(R.id.multiply).text.toString()
+            findViewById<TextView>(R.id.number).text = pantalla
             pantalla=""
         }
-        buttonPlus.setOnClickListener {
-            pantalla = buttonPlus.text.toString()
-            text.text = pantalla
+        findViewById<Button>(R.id.sum).setOnClickListener {
+            pantalla = findViewById<Button>(R.id.sum).text.toString()
+            findViewById<TextView>(R.id.number).text = pantalla
             pantalla=""
         }
-        buttonMinus.setOnClickListener {
-            pantalla = buttonMinus.text.toString()
-            text.text = pantalla
+        findViewById<Button>(R.id.minus).setOnClickListener {
+            pantalla = findViewById<Button>(R.id.minus).text.toString()
+            findViewById<TextView>(R.id.number).text = pantalla
             pantalla=""
         }
-        buttonDot.setOnClickListener {
-            pantalla += buttonDot.text.toString()
-            text.text = pantalla
+        findViewById<Button>(R.id.dot).setOnClickListener {
+            pantalla += findViewById<Button>(R.id.dot).text.toString()
+            findViewById<TextView>(R.id.number).text = pantalla
         }
-        buttonShare.setOnClickListener {
+        findViewById<Button>(R.id.share).setOnClickListener {
             pantalla = getString(R.string.compartido)
-            text.text = pantalla
+            findViewById<TextView>(R.id.number).text = pantalla
             pantalla=""
         }
     }
@@ -126,6 +104,5 @@ class MainActivity : AppCompatActivity() {
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         pantalla=savedInstanceState.getString("pantalla","").toString()
-
     }
 }
