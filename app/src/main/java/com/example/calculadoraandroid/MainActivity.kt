@@ -11,82 +11,38 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        findViewById<Button>(R.id.button0).setOnClickListener {
-            pantalla += findViewById<Button>(R.id.button0).text.toString()
-            findViewById<TextView>(R.id.number).text = pantalla
+        val numericButtonIds = listOf(
+            R.id.button1, R.id.button2, R.id.button3,
+            R.id.button4, R.id.button5, R.id.button6, R.id.button7,
+            R.id.button8, R.id.button9
+        )
+        val showOnceButtonIds = listOf(
+            R.id.button0, R.id.ac, R.id.equals
+        )
+
+        val operationButtonIds = listOf(
+            R.id.divide, R.id.multiply, R.id.sum, R.id.minus, R.id.dot, R.id.share
+        )
+
+        for (buttonId in numericButtonIds) {
+            findViewById<Button>(buttonId).setOnClickListener {
+                pantalla += findViewById<Button>(buttonId).text.toString()
+                findViewById<TextView>(R.id.number).text = pantalla
+            }
         }
-        findViewById<Button>(R.id.button1).setOnClickListener {
-            pantalla += findViewById<Button>(R.id.button1).text.toString()
-            findViewById<TextView>(R.id.number).text = pantalla
+        for (buttonId in showOnceButtonIds) {
+            findViewById<Button>(buttonId).setOnClickListener {
+                findViewById<TextView>(R.id.number).text ="0"
+                pantalla = ""
+            }
         }
-        findViewById<Button>(R.id.button2).setOnClickListener {
-            pantalla += findViewById<Button>(R.id.button2).text.toString()
-            findViewById<TextView>(R.id.number).text = pantalla
-        }
-        findViewById<Button>(R.id.button3).setOnClickListener {
-            pantalla += findViewById<Button>(R.id.button3).text.toString()
-            findViewById<TextView>(R.id.number).text = pantalla
-        }
-        findViewById<Button>(R.id.button4).setOnClickListener {
-            pantalla += findViewById<Button>(R.id.button4).text.toString()
-            findViewById<TextView>(R.id.number).text = pantalla
-        }
-        findViewById<Button>(R.id.button5).setOnClickListener {
-            pantalla +=  findViewById<Button>(R.id.button5).text.toString()
-            findViewById<TextView>(R.id.number).text = pantalla
-        }
-        findViewById<Button>(R.id.button6).setOnClickListener {
-            pantalla += findViewById<Button>(R.id.button6).text.toString()
-            findViewById<TextView>(R.id.number).text = pantalla
-        }
-        findViewById<Button>(R.id.button7).setOnClickListener {
-            pantalla += findViewById<Button>(R.id.button7).text.toString()
-            findViewById<TextView>(R.id.number).text = pantalla
-        }
-        findViewById<Button>(R.id.button8).setOnClickListener {
-            pantalla += findViewById<Button>(R.id.button8).text.toString()
-            findViewById<TextView>(R.id.number).text = pantalla
-        }
-        findViewById<Button>(R.id.button9).setOnClickListener {
-            pantalla += findViewById<Button>(R.id.button9).text.toString()
-            findViewById<TextView>(R.id.number).text = pantalla
-        }
-        findViewById<Button>(R.id.ac).setOnClickListener {
-            findViewById<TextView>(R.id.number).text="0"
-            pantalla=""
-        }
-        findViewById<Button>(R.id.equals).setOnClickListener {
-            findViewById<TextView>(R.id.number).text="0"
-            pantalla=""
-        }
-        findViewById<Button>(R.id.divide).setOnClickListener {
-            pantalla= findViewById<Button>(R.id.divide).text.toString()
-            findViewById<TextView>(R.id.number).text = pantalla
-            pantalla=""
-        }
-        findViewById<Button>(R.id.multiply).setOnClickListener {
-            pantalla = findViewById<Button>(R.id.multiply).text.toString()
-            findViewById<TextView>(R.id.number).text = pantalla
-            pantalla=""
-        }
-        findViewById<Button>(R.id.sum).setOnClickListener {
-            pantalla = findViewById<Button>(R.id.sum).text.toString()
-            findViewById<TextView>(R.id.number).text = pantalla
-            pantalla=""
-        }
-        findViewById<Button>(R.id.minus).setOnClickListener {
-            pantalla = findViewById<Button>(R.id.minus).text.toString()
-            findViewById<TextView>(R.id.number).text = pantalla
-            pantalla=""
-        }
-        findViewById<Button>(R.id.dot).setOnClickListener {
-            pantalla += findViewById<Button>(R.id.dot).text.toString()
-            findViewById<TextView>(R.id.number).text = pantalla
-        }
-        findViewById<Button>(R.id.share).setOnClickListener {
-            pantalla = getString(R.string.compartido)
-            findViewById<TextView>(R.id.number).text = pantalla
-            pantalla=""
+
+        for (buttonId in operationButtonIds) {
+            findViewById<Button>(buttonId).setOnClickListener {
+                pantalla = findViewById<Button>(buttonId).text.toString()
+                findViewById<TextView>(R.id.number).text = pantalla
+                pantalla = ""
+            }
         }
     }
 
